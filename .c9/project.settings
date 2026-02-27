@@ -8,7 +8,10 @@
     },
     "extensions": {
         "@aws.profile": "",
-        "@aws.samcli.lambdaTimeout": 90000
+        "@aws.samcli.lambdaTimeout": 90000,
+        "@git.repositoryScanIgnoredFolders": [
+            "node_modules"
+        ]
     },
     "instance": {
         "@automaticShutdown": "never"

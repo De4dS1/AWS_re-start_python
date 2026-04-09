@@ -1,0 +1,10 @@
+## VEnv Python
+AwsSDK/bin
+AwsSDK/include
+AwsSDK/lib
+AwsSDK/lib64
+AwsSDK/pyvenv.cfg
+AwsSDK/*.pyc
+
+__pycache__/
+.pytest_cache

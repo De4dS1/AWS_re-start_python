@@ -1,0 +1,18 @@
+#!/bin/bash
+range_init() {
+    RANGE=$(ls ~/Datos/wallps | wc -l)
+    shuf -i 1-$RANGE >liswall
+}
+
+if (($(cat liswall | wc -l) == 0)); then
+    range_init
+fi
+
+NUMBER=$(head -n 1 liswall)
+COUNT=$(ls ~/Datos/wallps | wc -l)
+
+FILE=$(ls ~/Datos/wallps | tail -n $(($COUNT + 1 - $NUMBER)) | head -n 1)
+
+plasma-apply-wallpaperimage ~/Datos/wallps/$FILE
+
+sed -i "/$NUMBER/d" liswall
